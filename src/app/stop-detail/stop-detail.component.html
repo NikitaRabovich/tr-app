@@ -1,0 +1,8 @@
+<div *ngIf="stop">
+  <h3>{{stop.name | uppercase}} <button (click)="reverse(stop)">↕</button></h3>
+  <ol class="routes">
+    <li *ngFor="let route of stop.routesSet" [class.selected]="route === selectedRoute" (click)="onRouteSelect(Route)">
+      {{route.id}} - {{route.firstStop}} - {{route.lastStop}}
+    </li>
+  </ol>
+</div>

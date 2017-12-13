@@ -1,0 +1,8 @@
+<h2>ОСТАНОВКИ</h2>
+<ul class="stops">
+  <li *ngFor="let stop of stops" [class.selected]="stop === selectedstop" (click)="onSelect(stop)">
+    {{stop.name}} <span class="badge">{{stop.routesSet}}</span>
+  </li>
+</ul>
+
+<app-stop-detail [stop]="selectedStop"></app-stop-detail>
