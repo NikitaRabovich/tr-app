@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Route } from './route';
 import { ROUTES } from './routes/routes';
-import { Stop } from './stop';
-import { STOPS } from './stops/all-stops';
+import { Stopr } from './stopr';
+import { STOPSR } from './stops/stopsr';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
@@ -12,9 +12,9 @@ export class StopService {
 
   constructor(private messageService: MessageService) { }
 
-  getStops(): Observable<Stop[]> {
+  getStopsr(): Observable<Stopr[]> {
     // Todo: send the message _after_ fetching the stops
     this.messageService.add('StopService: fetched stops');
-    return of(STOPS);
+    return of(STOPSR);
   }
 }

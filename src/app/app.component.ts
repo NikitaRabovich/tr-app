@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+var timestamp = require('time-stamp');
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MINSK TRANSPORT';
+  currentTime = timestamp('HH:mm');
 }

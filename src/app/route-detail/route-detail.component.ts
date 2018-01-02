@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Route } from '../route';
 import { ROUTES } from '../routes/routes';
 import { Stop } from '../stop';
@@ -8,6 +8,7 @@ import { STOPS } from '../stops/all-stops';
   selector: 'app-route-detail',
   templateUrl: './route-detail.component.html',
   styleUrls: ['./route-detail.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RouteDetailComponent implements OnInit {
   @Input() route: Route;
@@ -17,7 +18,7 @@ export class RouteDetailComponent implements OnInit {
 
   onStopSelect(stop: Stop): void {
     this.selectedStop = stop;
-    console.log(stop + 'seleceted');    
+    console.log(stop.name + ' seleceted'); 
   }
 
   reverse(route: Route): void {

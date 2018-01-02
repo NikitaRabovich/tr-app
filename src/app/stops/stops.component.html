@@ -1,8 +1,8 @@
-<h2>ОСТАНОВКИ</h2>
-<ul class="stops">
-  <li *ngFor="let stop of stops" [class.selected]="stop === selectedstop" (click)="onSelect(stop)">
-    {{stop.name}} <span class="badge">{{stop.routesSet}}</span>
+<h2>РАСПИСАНИЕ ТРАМВАЕВ</h2>
+<ul class="trams">
+  <li *ngFor="let stopr of stopsr" [class.selected]="stopr === selectedStopr" (click)="onSelect(stopr)">
+    <span class="badge">{{stopr.name}}</span> <span>{{stopr.altroutes.id}}</span>
   </li>
 </ul>
 
-<app-stop-detail [stop]="selectedStop"></app-stop-detail>
+<app-stop-detail [stopr]="selectedStopr"></app-stop-detail>

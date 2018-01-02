@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'stops', component: StopsComponent},
   {path: '', redirectTo: '/routes', pathMatch: 'full'},
   {path: 'routedetail/:id', component: RouteDetailComponent},
-  {path: 'stopdetail/:id', component: StopDetailComponent},
+  {path: 'stopdetail/:id', component: StopDetailComponent}
 ]
 
 @NgModule({

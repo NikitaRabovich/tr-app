@@ -4,7 +4,7 @@ import { STOPS } from './stops/all-stops';
 export class Route {
   id: number;
   stopsNumber: number;
-  stops: any;
+  stops: Stop[];
   stopsCount: number;
   firstStop: string;
   lastStop: string;
