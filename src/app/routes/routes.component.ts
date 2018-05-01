@@ -21,7 +21,7 @@ export class RoutesComponent implements OnInit {
 
   onSelect(route: Route): void {
     this.selectedRoute = route;
-    console.log(route.id + ' seleceted');
+    console.log(route.id + ' route seleceted');
   }
 
   getRoutes(): void {

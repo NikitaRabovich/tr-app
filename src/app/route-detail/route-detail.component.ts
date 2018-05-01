@@ -3,6 +3,8 @@ import { Route } from '../route';
 import { ROUTES } from '../routes/routes';
 import { Stop } from '../stop';
 import { STOPS } from '../stops/all-stops';
+import { Time } from '../time';
+import { TIMES } from '../times/times';
 
 @Component({
   selector: 'app-route-detail',
@@ -16,9 +18,12 @@ export class RouteDetailComponent implements OnInit {
   stops: Stop[];
   selectedStop: Stop;
 
+  times: Time[];
+  selectedTime: Time;
+
   onStopSelect(stop: Stop): void {
     this.selectedStop = stop;
-    console.log(stop.name + ' seleceted'); 
+    console.log(stop.id + ' ' + stop.name + ' stop seleceted'); 
   }
 
   reverse(route: Route): void {

@@ -22,7 +22,7 @@ export class StopDetailComponent implements OnInit {
   
     onRouteSelect(altroute: Route): void {
       this.selectedAltroute = altroute;
-      console.log(altroute.id + ' selected');
+      console.log(altroute.id + ' route selected');
       //console.log(this.altroute.id);    
     }
   

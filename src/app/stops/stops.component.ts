@@ -22,7 +22,7 @@ export class StopsComponent implements OnInit {
 
   onSelect(stopr: Stopr): void {
     this.selectedStopr = stopr;
-    console.log(stopr.id + ' selected');
+    console.log(stopr.id + ' stop selected');
   }
 
   getRoutes(): void {
