@@ -1,0 +1,8 @@
+<h2>РАСПИСАНИЕ ТРАМВАЕВ</h2>
+<ul class="trams">
+  <li *ngFor="let route of routes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
+    <span class="badge">{{route.id}}</span> {{route.firstStop}} - {{route.lastStop}}
+  </li>
+</ul>
+
+<app-route-detail [route]="selectedRoute"></app-route-detail>
