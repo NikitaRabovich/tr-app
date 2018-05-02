@@ -1,8 +1,0 @@
-<h2>РАСПИСАНИЕ ТРАМВАЕВ</h2>
-<ul class="trams">
-  <li *ngFor="let stopr of stopsr" [class.selected]="stopr === selectedStopr" (click)="onSelect(stopr)">
-    <span class="badge">{{stopr.name}}</span> <span>{{stopr.altroutes.id}}</span>
-  </li>
-</ul>
-
-<app-stop-detail [stopr]="selectedStopr"></app-stop-detail>

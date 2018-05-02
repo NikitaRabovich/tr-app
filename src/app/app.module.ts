@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +17,14 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { StopDetailComponent } from './stop-detail/stop-detail.component';
 
+// Must export the config
+export const firebaseConfig = {
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  storageBucket: '',
+  messagingSenderId: ''
+};
 
 @NgModule({
   declarations: [
@@ -29,7 +39,9 @@ import { StopDetailComponent } from './stop-detail/stop-detail.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [ RouteService, StopService, MessageService ],
   bootstrap: [AppComponent]

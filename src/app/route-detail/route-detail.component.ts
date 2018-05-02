@@ -17,6 +17,7 @@ export class RouteDetailComponent implements OnInit {
 
   stops: Stop[];
   selectedStop: Stop;
+  selectedStopr: Stop;
 
   times: Time[];
   selectedTime: Time;
